@@ -1,0 +1,99 @@
+
+C:\Users\james\Videos\Buck>ffmpeg -v verbose -f concat -safe 0 -protocol_whitelist "file,http,https,tcp,tls" -i concat_clean.txt output_clean.mp4
+ffmpeg version 2023-04-12-git-1179bb703e-full_build-www.gyan.dev Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.0 (Rev10, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libvpl --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      58.  6.100 / 58.  6.100
+  libavcodec     60.  9.100 / 60.  9.100
+  libavformat    60.  4.101 / 60.  4.101
+  libavdevice    60.  2.100 / 60.  2.100
+  libavfilter     9.  5.100 /  9.  5.100
+  libswscale      7.  2.100 /  7.  2.100
+  libswresample   4. 11.100 /  4. 11.100
+  libpostproc    57.  2.100 / 57.  2.100
+[h264 @ 00000203b6ef0400] Reinit context to 1280x720, pix_fmt: yuv420p
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000203b6ed5480] Auto-inserting h264_mp4toannexb bitstream filter
+[h264 @ 00000203b74d00c0] Reinit context to 1280x720, pix_fmt: yuv420p
+Input #0, concat, from 'concat_clean.txt':
+  Duration: N/A, start: -0.023220, bitrate: 1489 kb/s
+  Stream #0:0(und): Video: h264 (High), 1 reference frame (avc1 / 0x31637661), yuv420p(progressive, left), 1280x720 [SAR 1:1 DAR 16:9], 1364 kb/s, 24 fps, 24 tbr, 12288 tbn
+    Metadata:
+      handler_name    : (C) 2007 Google Inc. v08.13.2007.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.9.100 libx264
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 125 kb/s
+    Metadata:
+      handler_name    : (C) 2007 Google Inc. v08.13.2007.
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[h264 @ 00000203b6f8d100] Reinit context to 1280x720, pix_fmt: yuv420p
+[graph_1_in_0_1 @ 00000203b80ba600] tb:1/44100 samplefmt:fltp samplerate:44100 chlayout:stereo
+[graph 0 input from stream 0:0 @ 00000203b80bb200] w:1280 h:720 pixfmt:yuv420p tb:1/12288 fr:24/1 sar:1/1
+[libx264 @ 00000203b6ee6340] using SAR=1/1
+[libx264 @ 00000203b6ee6340] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 00000203b6ee6340] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 00000203b6ee6340] 264 - core 164 r3106 eaa68fa - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'output_clean.mp4':
+  Metadata:
+    encoder         : Lavf60.4.101
+  Stream #0:0(und): Video: h264, 1 reference frame (avc1 / 0x31637661), yuv420p(progressive, left), 1280x720 (0x0) [SAR 1:1 DAR 16:9], q=2-31, 24 fps, 12288 tbn
+    Metadata:
+      handler_name    : (C) 2007 Google Inc. v08.13.2007.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.9.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, delay 1024, 128 kb/s
+    Metadata:
+      handler_name    : (C) 2007 Google Inc. v08.13.2007.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.9.100 aac
+[vost#0:0/libx264 @ 00000203b6ee6000] *** 1 dup!
+frame=    0 fps=0.0 q=0.0 size=       0kB time=00:00:00.13 bitrate=   2.8kbits/s du[AVIOContext @ 00000203b6ee7a00] Statistics: 223666 bytes read, 2 seeks
+[h264 @ 00000203b6f16cc0] Reinit context to 1280x720, pix_fmt: yuv420p
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000203b6f0a600] Auto-inserting h264_mp4toannexb bitstream filter
+[AVIOContext @ 00000203b6f0a8c0] Statistics: 465931 bytes read, 2 seeks
+[h264 @ 00000203b6f17cc0] Reinit context to 1280x720, pix_fmt: yuv420p
+[mov,mp4,m4a,3gp,3g2,mj2 @ 00000203b6f0a600] Auto-inserting h264_mp4toannexb bitstream filter
+frame=    0 fps=0.0 q=0.0 size=       0kB time=00:00:02.04 bitrate=   0.2kbits/s du[in#0/concat @ 00000203b6ec14c0] EOF while reading input
+[in#0/concat @ 00000203b6ec14c0] Terminating demuxer thread
+frame=   20 fps= 19 q=28.0 size=       0kB time=00:00:02.97 bitrate=   0.1kbits/s dNo more output streams to write to, finishing.
+[out#0/mp4 @ 00000203b6ebf3c0] All streams finished
+[out#0/mp4 @ 00000203b6ebf3c0] Terminating muxer thread
+[AVIOContext @ 00000203b6f8c780] Statistics: 874200 bytes written, 2 seeks, 7 writeouts
+frame=   73 fps= 29 q=-1.0 Lsize=     854kB time=00:00:03.02 bitrate=2314.5kbits/s dup=1 drop=0 speed=1.22x
+video:802kB audio:48kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.423545%
+Input file #0 (concat_clean.txt):
+  Input stream #0:0 (video): 72 packets read (855159 bytes); 72 frames decoded;
+  Input stream #0:1 (audio): 135 packets read (47824 bytes); 132 frames decoded (135168 samples);
+  Total: 207 packets (902983 bytes) demuxed
+Output file #0 (output_clean.mp4):
+  Output stream #0:0 (video): 73 frames encoded; 73 packets muxed (821363 bytes);
+  Output stream #0:1 (audio): 132 frames encoded (135168 samples); 133 packets muxed (49146 bytes);
+  Total: 206 packets (870509 bytes) muxed
+[libx264 @ 00000203b6ee6340] frame I:3     Avg QP:20.08  size: 99229
+[libx264 @ 00000203b6ee6340] frame P:33    Avg QP:23.91  size: 12149
+[libx264 @ 00000203b6ee6340] frame B:37    Avg QP:28.52  size:  3300
+[libx264 @ 00000203b6ee6340] consecutive B-frames: 24.7% 21.9%  4.1% 49.3%
+[libx264 @ 00000203b6ee6340] mb I  I16..4: 11.2% 63.6% 25.1%
+[libx264 @ 00000203b6ee6340] mb P  I16..4:  2.9%  7.0%  0.4%  P16..4: 39.8%  8.0%  4.0%  0.0%  0.0%    skip:37.8%
+[libx264 @ 00000203b6ee6340] mb B  I16..4:  0.4%  1.0%  0.1%  B16..8: 29.5%  4.1%  0.8%  direct: 0.9%  skip:63.2%  L0:56.5% L1:38.9% BI: 4.6%
+[libx264 @ 00000203b6ee6340] 8x8 transform intra:66.0% inter:73.3%
+[libx264 @ 00000203b6ee6340] coded y,uvDC,uvAC intra: 55.9% 56.9% 17.8% inter: 9.2% 10.0% 0.1%
+[libx264 @ 00000203b6ee6340] i16 v,h,dc,p: 23% 20%  4% 53%
+[libx264 @ 00000203b6ee6340] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 18% 15%  5%  7%  8%  6%  7%  7%
+[libx264 @ 00000203b6ee6340] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 21% 10%  4%  8%  7%  7%  4%  6%
+[libx264 @ 00000203b6ee6340] i8c dc,h,v,p: 54% 19% 20%  7%
+[libx264 @ 00000203b6ee6340] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000203b6ee6340] ref P L0: 73.6% 11.5% 12.1%  2.8%
+[libx264 @ 00000203b6ee6340] ref B L0: 83.8% 15.4%  0.8%
+[libx264 @ 00000203b6ee6340] ref B L1: 96.0%  4.0%
+[libx264 @ 00000203b6ee6340] kb/s:2158.48
+[aac @ 00000203b74cd7c0] Qavg: 201.231
+[AVIOContext @ 00000203be61b6c0] Statistics: 324495 bytes read, 2 seeks
+[AVIOContext @ 00000203b6ed46c0] Statistics: 62 bytes read, 0 seeks
+
+C:\Users\james\Videos\Buck>

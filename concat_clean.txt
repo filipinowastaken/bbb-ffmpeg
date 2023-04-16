@@ -1,0 +1,4 @@
+ffconcat version 1.0
+file 'x.mp4'
+file 'y.mp4'
+file 'z.mp4'
